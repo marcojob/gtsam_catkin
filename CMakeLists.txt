@@ -9,13 +9,14 @@ include(ExternalProject)
 file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/include)
 
 ExternalProject_Add(gtsam
-        GIT_REPOSITORY https://github.com/borglab/gtsam.git
-        GIT_TAG fc5cb3e
+        GIT_REPOSITORY git@github.com:rikba/gtsam.git
+        GIT_TAG aceac22
         UPDATE_COMMAND ""
         CMAKE_ARGS
             -DCMAKE_INSTALL_PREFIX=${CATKIN_DEVEL_PREFIX}
             -DCMAKE_PREFIX_PATH=${CATKIN_DEVEL_PREFIX}
             -DGTSAM_USE_SYSTEM_EIGEN=ON
+            -DGTSAM_ENABLE_DEBUG=OFF
             -DCMAKE_BUILD_TYPE:STRING=Release
         BUILD_COMMAND $(MAKE)
         INSTALL_COMMAND $(MAKE) install
