@@ -16,7 +16,7 @@ ExternalProject_Add(gtsam
             -DCMAKE_INSTALL_PREFIX=${CATKIN_DEVEL_PREFIX}
             -DCMAKE_PREFIX_PATH=${CATKIN_DEVEL_PREFIX}
             -DGTSAM_USE_SYSTEM_EIGEN=ON
-            -DGTSAM_ENABLE_DEBUG=OFF
+            -DGTSAM_WITH_TBB=OFF
             -DCMAKE_BUILD_TYPE:STRING=Release
         BUILD_COMMAND $(MAKE)
         INSTALL_COMMAND $(MAKE) install
