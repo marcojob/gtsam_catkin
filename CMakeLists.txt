@@ -9,7 +9,7 @@ include(ExternalProject)
 file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/include)
 
 ExternalProject_Add(gtsam
-        GIT_REPOSITORY git@github.com:rikba/gtsam.git
+        GIT_REPOSITORY https://github.com/rikba/gtsam.git
         GIT_TAG aceac22
         UPDATE_COMMAND ""
         CMAKE_ARGS
